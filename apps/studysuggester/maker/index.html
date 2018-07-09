@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<title>問題作成ツール - Study Suggester</title>
+<link rel="shortcut icon" href="../favicon.ico">
+<meta charset="utf-8">
+<script src="maker.js"></script>
+</head>
+<body>
+<style>
+
+  *{
+  font-family: 'メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  }
+  body{
+  background:#3c3c3c;
+  color:#fafafa;
+  }
+  a{
+  color:#fafafa;
+  border-radius: 3px;
+  transition-duration: 0.2s;
+  }
+  a:hover{
+  background:#000000;
+  transition-duration: 0.2s;
+  }
+  input[type="text"]{
+  width:100%;
+  height:30px;
+  font-size:11pt;
+  background:#000;
+  color:#fafafa;
+  border:#dadada 2px solid;
+  transition-duration: 0.2s;
+  border-radius:5px;
+  }
+  input[type="button"]{
+    background:#000;
+	color:#fafafa;
+    border:#dadada 2px solid;
+	transition-duration: 0.2s;
+  }
+  input:focus,textarea:focus{
+    border:#3a74d1 2px solid;
+	background:#3c3c3c;
+  }
+  input:hover,textarea:hover{
+  background:#3c3c3c;
+  }
+  #qm{
+  background:#6c6c6c;
+  }
+  textarea{
+  width:100%;
+  height:200px;
+  background:#000;
+  color:#fafafa;
+  border:#dadada 2px solid;
+  font-size:10pt;
+  transition-duration: 0.2s;
+  border-radius:5px;
+  }
+</style>
+  <a href="../">&lt; 戻る</a>&nbsp;&nbsp;<b>Study Suggester 問題ファイル作成ツール</b>
+  <p>この問題群のタイトル<br><input type="text" id="title" placeholder="ここにタイトルを入力 (例:歴史 大正 年号  ※ただし、解答時は半角数字のみで答えること。)" autocomplete="off" onkeydown="enter(event,0);"><br><input type="button" onclick="titleChange();" value="タイトル変更"> ←<b>タイトル</b>の入力が終わったらクリック</p><div id="qm">問題<br><input type="text" id="q" placeholder="ここに問題を入力 (例:ニューヨークで世界恐慌が起きたのは何年?)" autocomplete="off" onkeydown="enter(event,1);"><br>答え<br><input type="text" id="a" placeholder="ここに答えを入力 (例:1929)" autocomplete="off" onkeydown="enter(event,2);"><br><input type="button" onclick="add();" value="追加"> ←<b>問題</b>と<b>答え</b>の入力が終わったらクリック</div>
+  問題リスト<br><textarea id="qlist"></textarea><input type="text" id="filename" placeholder="ファイル名(例:rekishi-nengo.txt) ※拡張子は .txt にしてください。" onkeydown="enter(event,3);"><br><input type="button" onclick="fileDown();" value="ダウンロード(保存)">
+</body>
+</html>

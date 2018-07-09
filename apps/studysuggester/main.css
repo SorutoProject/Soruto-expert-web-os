@@ -1,0 +1,159 @@
+/*共通*/
+*{
+  font-family: 'メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+body{
+  color:#2c2c2c;
+  background-image:url(b017.jpg);
+}
+a{
+  text-align: left;
+  color:#fafafa;
+  font-size:12pt;
+}
+.ptitle{
+  font-size:16pt;
+  text-shadow: 2px 2px 7px #1a1a1a;
+  font-weight: bold;
+}
+.desc{
+ font-size:10pt;
+ text-shadow: 5px 5px 2px #1a1a1a;
+}
+.bp{
+  color:#3c3c3c;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:14pt;
+  border-radius: 4px;
+}
+.bp:hover{
+  background:#ededed;
+}
+input[type="button"]{
+  width:80%;
+  height:40px;
+  background:#3c3c3c;
+  border:#2222dd 1px solid;
+  color:#fafafa;
+}
+#answer{
+  width:calc(100% - 10px);
+  height:30px;
+  border:#daaada 1px solid;
+  margin-bottom: 5px;
+  background:#4c4c4c;
+  color:#fafafa;
+}
+#ansb{
+    background:#3c3c3c;
+  color:#fafafa;
+  margin-top:10px;
+  font-size:10pt;
+  border:#5555aa 1px solid!important;;
+  transition-duration: 0.2s;
+  border-radius: 5px;
+  outline: none;
+}
+/*端末別*/
+@media screen and (min-width:480px){
+.sl{
+  display:block;
+  background:#3c3c3c;
+  width:300px;
+  height:50px;
+  color:#fafafa;
+  border-radius:5px;
+  text-decoration:none;
+  margin:0 auto;
+  left:0;
+  right:0;
+  margin-bottom: 4px;
+  font-size:18pt;
+  text-align: center;
+}
+  #ansb{
+    width:150px;
+}
+  #answer{
+    width:250px;
+  }
+  #question{
+    font-size:14pt;
+  }
+  #fsicon{
+	width:24px;
+	height:24px;
+	position:absolute;
+	top:75px;
+	right:10px;
+}
+  #seticon{
+	width:24px;
+	height:24px;
+	position:absolute;
+	top:40px;
+	right:10px;
+}
+  #timebar{
+    width:100%;
+    height:20px;
+    font-size: 10pt;
+    background: #3c3c3c;
+    color:#fafafa;
+    text-align: right;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 101;
+    cursor: default;
+  }
+  #topempty{
+    height:30px;
+  }
+}
+@media screen and (max-width:479px){
+.sl{
+  display:block;
+  text-align: center;
+  background:#3c3c3c;
+  width:100%;
+  height:50px;
+  font-size:18pt;
+  color:#fafafa;
+  border-bottom:#000 3px solid;
+  text-decoration:none;
+  text-align: center;
+}
+  .sl:hover{
+    background:#4c4c4c;
+  }
+#question{
+  font-size:10pt;
+  font-weight:bold;
+}
+  #answer{
+    width:99%;
+    border-radius: 5px;
+    height:40px;
+  }
+  #fsicon{
+    display: none;
+}
+  #timebar{
+    display: none;
+  }
+  #seticon{
+	width:24px;
+	height:24px;
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+  #empty{
+    display: none;
+  }
+}
+#so-modal{
+  z-index: 103;
+}
